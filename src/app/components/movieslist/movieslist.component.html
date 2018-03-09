@@ -1,3 +1,6 @@
 <section class="container" id="movies-list">
-  <ml-movie-item></ml-movie-item>
+  <virtual-list #scroll [source$]="source$" (update)="viewPortItems = $event">
+    <ml-movie-item *ngFor="let movie of viewPortItems" [movie]="movie">
+    </ml-movie-item>
+  </virtual-list>
 </section>

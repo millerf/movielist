@@ -19,6 +19,7 @@ export class DataManagerService {
         movie.id = m.id;
         movie.voteCount = m.vote_count;
         movie.voteAvg = m.vote_average;
+        movie.thumbnailUrl = m.backdrop_path;
         this.moviesList.push(movie);
       }
     } catch (e) {

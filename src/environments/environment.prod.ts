@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  thumbnailPrefix: 'http://image.tmdb.org/t/p/w92/',
 };
