@@ -1,4 +1,8 @@
 .media{
   padding:5px;
   border: 1px solid black;
+
+  &.active{
+    background-color: grey;
+  }
 }

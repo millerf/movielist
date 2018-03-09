@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Movie } from '../../movie';
 import { environment } from '../../../environments/environment';
+import { Broadcaster } from '../../services/broadcaster.service';
+import { Subscription } from 'rxjs/Subscription';
+import { EVENTNAMES } from '../../constants/events.constant';
 
 /**
  * MovieItemComponent
@@ -13,20 +16,43 @@ import { environment } from '../../../environments/environment';
   selector: 'ml-movie-item',
   templateUrl: './movie-item.component.html'
 })
-export class MovieItemComponent implements OnInit {
+export class MovieItemComponent implements OnInit, OnDestroy {
 
   @Input('movie') movie: Movie;
 
-  constructor() {
+  infoDisplayed = false; // If the infos of this media are displayed
+  mediaClickedSubscription: Subscription;
+  mediaChangedSubscription: Subscription;
+
+  constructor(private broadcaster: Broadcaster) {
   }
 
   ngOnInit() {
+    this.mediaClickedSubscription = this.broadcaster.on( EVENTNAMES.mediaClicked)
+      .subscribe(() => {
+        this.infoDisplayed = false;
+      });
+    this.mediaChangedSubscription = this.broadcaster.on(EVENTNAMES.mediaUpdated(this.movie.id))
+      .subscribe((newtitle: string) => {
+        this.movie.title = newtitle;
+      });
+  }
+
+  ngOnDestroy() {
+    this.mediaClickedSubscription.unsubscribe();
+    this.mediaChangedSubscription.unsubscribe();
   }
 
   public getThumbnailUrl() {
 
     // The thumbnail prefix is being retrieved from the environment and added to the thumbnail path.
-
     return environment.thumbnailPrefix + this.movie.thumbnailUrl;
+  }
+
+  public mediaClicked() {
+    // We send a copy of the object
+    this.broadcaster.broadcast('mediaClicked', this.movie.clone());
+    this.infoDisplayed = true;
+
   }
 }

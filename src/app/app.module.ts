@@ -9,6 +9,8 @@ import { MovieDetailsComponent } from './components/moviedetails/moviedetails.co
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { DataManagerService } from './services/data-manager.service';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { Broadcaster } from './services/broadcaster.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,9 +23,13 @@ import { TruncatePipe } from './pipes/truncate.pipe';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     VirtualListModule
   ],
-  providers: [ DataManagerService],
+  providers: [
+    DataManagerService,
+    Broadcaster
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

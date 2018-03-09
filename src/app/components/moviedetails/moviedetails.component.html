@@ -1,3 +1,3 @@
-<section class="container">
-  Media details
+<section class="container" *ngIf="movie">
+  Title: <input #input [value]="movie.title" (keyup)="changeName()"/>
 </section>

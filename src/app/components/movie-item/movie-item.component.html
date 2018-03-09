@@ -1,4 +1,4 @@
-<div class="media">
+<div class="media" (click)="mediaClicked()" [ngClass]="{'active': infoDisplayed}">
   <img class="mr-3" [src]="getThumbnailUrl()">
   <div class="media-body">
     <h5 class="mt-0">{{ movie.title }}</h5>

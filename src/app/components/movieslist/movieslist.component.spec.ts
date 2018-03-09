@@ -11,7 +11,7 @@ describe('MovielistComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoviesListComponent, TruncatePipe],
+      declarations: [ MoviesListComponent],
       providers: [DataManagerService],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     })
