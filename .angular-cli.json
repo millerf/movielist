@@ -17,9 +17,9 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "ml",
       "styles": [
-        "assets/sass/style.sass"
+        "assets/sass/style.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
