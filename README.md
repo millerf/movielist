@@ -20,7 +20,8 @@ Things to note:
 1. The list should scroll smoothly.
 2. When the movie is loaded on click on the right side of the page, a new object reference should be used.
 
-## Running end-to-end tests
+## Installation
+Clone the project and do `npm install`.
 
 ## Development server
 
