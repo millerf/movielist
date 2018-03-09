@@ -1,18 +1,30 @@
 # MovieList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+It was used as a competency test.
+
+## Rules
+The assets/movies.json JSON file, contains around 700 movies. Using this file, build a list of movies. 
+Each item should display: 
+1. title
+2. poster image
+3. truncated description 
+4. vote_average
+5. vote_count
+ 
+Note: To display the poster append the poster_path to "http://image.tmdb.org/t/p/w92/". For example if the entry has poster_path "\/imps263dHNe3SuoaAJORZyNTdDT.jpg" then the poster image should be http://image.tmdb.org/t/p/w92/imps263dHNe3SuoaAJORZyNTdDT.jpg
+ 
+When clicking on a movie it should be highlighted, and its information should be loaded on the right side of the page: name, full description etc. Here the movie name should be as input field. Changing the input value, should update the movie name in the list.
+ 
+Things to note: 
+1. The list should scroll smoothly.
+2. When the movie is loaded on click on the right side of the page, a new object reference should be used.
+
+## Running end-to-end tests
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
@@ -22,6 +34,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
