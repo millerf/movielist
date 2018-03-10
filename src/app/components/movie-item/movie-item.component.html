@@ -1,5 +1,5 @@
 <div class="media" (click)="mediaClicked()" [ngClass]="{'active': infoDisplayed}">
-  <img class="mr-3" [src]="getThumbnailUrl()">
+  <img class="mr-3 rounded" [src]="movie.getThumbnailUrl()">
   <div class="media-body">
     <h5 class="mt-0">{{ movie.title }}</h5>
     <p>{{ movie.description | truncate : 50 : true}}</p>

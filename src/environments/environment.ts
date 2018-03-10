@@ -6,4 +6,5 @@
 export const environment = {
   production: false,
   thumbnailPrefix: 'http://image.tmdb.org/t/p/w92/',
+  thumbnailPrefixHighQ: 'http://image.tmdb.org/t/p/w300/',
 };

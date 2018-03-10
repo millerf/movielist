@@ -43,12 +43,6 @@ export class MovieItemComponent implements OnInit, OnDestroy {
     this.mediaChangedSubscription.unsubscribe();
   }
 
-  public getThumbnailUrl() {
-
-    // The thumbnail prefix is being retrieved from the environment and added to the thumbnail path.
-    return environment.thumbnailPrefix + this.movie.thumbnailUrl;
-  }
-
   public mediaClicked() {
     // We send a copy of the object
     this.broadcaster.broadcast('mediaClicked', this.movie.clone());
