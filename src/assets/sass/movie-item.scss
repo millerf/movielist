@@ -1,8 +1,10 @@
+@import "variables";
+
 .media{
   padding:5px;
-  border: 1px solid black;
+  border-bottom: .5px solid $grey;
 
   &.active{
-    background-color: grey;
+    background-color: $grey;
   }
 }

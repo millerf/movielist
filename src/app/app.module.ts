@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    VirtualListModule
+    VirtualListModule,
   ],
   providers: [
     DataManagerService,

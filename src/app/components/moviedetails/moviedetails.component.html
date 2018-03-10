@@ -1,3 +1,22 @@
-<section class="container" *ngIf="movie">
-  Title: <input #input [value]="movie.title" (keyup)="changeName()"/>
+<section *ngIf="movie" class="media-details container p-3">
+  <figure>
+    <img [src]="movie.getThumbnailUrl(true)" alt="..." class="rounded mx-auto d-block">
+  </figure>
+  <div class="form-group">
+    <label for="name">Title</label>
+    <input #input id="name" class="form-control" [value]="movie.title" (keyup)="changeName()" placeholder="name"/>
+  </div>
+  <div class="form-group">
+    <label>Rating</label>
+    <span class="form-control">{{movie.voteAvg}} average out of {{movie.voteCount}} votes</span>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <span class="form-control">{{movie.description}}</span>
+  </div>
+</section>
+<section *ngIf="!movie" class="media-details container p-3">
+  <div class="mx-auto text-center">
+    No Selection
+  </div>
 </section>
