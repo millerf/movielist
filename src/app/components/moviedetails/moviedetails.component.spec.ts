@@ -27,4 +27,6 @@ describe('MoviedetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });

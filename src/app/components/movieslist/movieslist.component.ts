@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { DataManagerService } from '../../services/data-manager.service';
 import { Movie } from '../../movie';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -25,6 +25,7 @@ export class MoviesListComponent implements OnInit {
 
     // We directly add the whole list to the virtual scroll
     this.source$.next(this.dataManager.moviesList);
+
   }
 
 }

@@ -3,6 +3,6 @@
   <div class="media-body">
     <h5 class="mt-0">{{ movie.title }}</h5>
     <p>{{ movie.description | truncate : 50 : true}}</p>
-    <span>note: {{ movie.voteAvg }} ({{movie.voteCount}})</span>
+    <span><b>rating</b>: {{ movie.voteAvg }} ({{movie.voteCount}})</span>
   </div>
 </div>
