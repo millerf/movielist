@@ -6,8 +6,8 @@ node_js:
 
 branches:
   only:
-  - gh-pages
-  - /.*/
+  - master
+  - coveralls-integration-and-badge
 
 before_script:
   - npm install -g @angular/cli
