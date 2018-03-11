@@ -24,9 +24,6 @@ script:
   - ng build --prod
   - ng test --code-coverage --watch false
 
-after_success:
-  - coveralls
-
 notifications:
   email:
     on_failure: change
