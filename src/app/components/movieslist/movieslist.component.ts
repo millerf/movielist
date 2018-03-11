@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { DataManagerService } from '../../services/data-manager.service';
-import { Movie } from '../../movie';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import {DataManagerService} from '../../services/data-manager.service';
+import {Movie} from '../../movie';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 /**
  * MoviesListComponent
@@ -17,11 +17,12 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class MoviesListComponent implements OnInit {
 
   source$ = new BehaviorSubject<Movie[]>(null);
+  viewPortItems: Movie[];
 
-  constructor(public dataManager: DataManagerService) {
+  constructor (public dataManager: DataManagerService) {
   }
 
-  ngOnInit() {
+  ngOnInit () {
 
     // We directly add the whole list to the virtual scroll
     this.source$.next(this.dataManager.moviesList);
