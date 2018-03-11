@@ -4,6 +4,11 @@ language: node_js
 node_js:
   - "6.9"
 
+branches:
+  only:
+  - master
+  - coveralls-integration-and-badge
+
 before_script:
   - npm install -g @angular/cli
   - npm install -g coveralls
