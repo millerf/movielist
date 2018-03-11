@@ -30,7 +30,9 @@ export class MovieDetailsComponent implements OnInit, OnDestroy {
     this.mediaClickedSubscription.unsubscribe();
   }
 
-  public changeName(name) {
-    this.broadcaster.broadcast(EVENTNAMES.mediaUpdated(this.movie.id), this.inputName.nativeElement.value);
+  public changeName() {
+    const new_title = this.inputName.nativeElement.value;
+    this.movie.title = new_title;
+    this.broadcaster.broadcast(EVENTNAMES.mediaUpdated(this.movie.id), new_title);
   }
 }
