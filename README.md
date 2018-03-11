@@ -1,5 +1,7 @@
 # MovieList
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1ffb09d8748341fda9e48b2c525d5589)](https://www.codacy.com/app/fab/movielist?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=millerf/movielist&amp;utm_campaign=Badge_Grade)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 It was used as a competency test.
 
